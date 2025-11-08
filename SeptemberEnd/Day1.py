@@ -69,3 +69,6 @@ for eachvalue in range(50,90):
 
 def test():
     pass
+
+def newTest():
+    pass
