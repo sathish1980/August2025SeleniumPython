@@ -43,7 +43,7 @@ class Test_MakeMyTripFlightSearch():
         Browser().Close_Browser(browser)
 
     @pytest.mark.usefixtures("Get_FlightSearch_data")
-    def test_FlightSearchWithValidData(self,Get_FlightSearch_data):
+    def tetest_FlightSearchWithValidData(self,Get_FlightSearch_data):
         env_details =ReadJsonData().GetEnvironmentDetails()
         url = env_details["url"]
         browser = Browser().OpenTheBrowser()
@@ -58,7 +58,7 @@ class Test_MakeMyTripFlightSearch():
         Click on Search
         Valdidate the Search Result
         """
-        time.sleep(5)
+        #time.sleep(5)
         FlightSearchPage().ClickOnFromCityDropdown(browser)
         FlightSearchPage().SelectValueFromList(browser,Get_FlightSearch_data[0])
         FlightSearchPage().ClickOnToCityDropdown(browser)
